@@ -62,4 +62,6 @@ dist
 *.iml
 gen
 gulpfile.js
-src
+src/
+package-lock.json
+package.json
