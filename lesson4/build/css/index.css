@@ -94,7 +94,7 @@
 .header__nav-link {
     font: 600 18px/1.2 Gilroy, sans-serif;
     text-decoration: none;
-    color: #ffffff;
+    color: #fff;
 }
 
 .header__nav-link:hover {
@@ -102,25 +102,15 @@
 }
 
 .header__button {
-    position: relative;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 45px;
     height: 45px;
-    border: 1px solid #ffffff;
+    border: 1px solid #fff;
     border-radius: 5px;
     background-color: transparent;
-}
-
-.header__button::before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 10px;
-    height: 17px;
-    margin: auto;
-    content: '';
-    background: url('../images/currency.svg') center no-repeat;
 }
 
 .title {

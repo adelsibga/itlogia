@@ -20,33 +20,33 @@
                     <nav class="header__nav">
                         <ul class="header__nav-items">
                             <li class="header__nav-item">
-                                <a class="header__nav-link" href="#">
+                                <a class="header__nav-link" data-link="why">
                                     Почему у нас
                                 </a>
                             </li>
                             <li class="header__nav-item">
-                                <a class="header__nav-link" href="#">
+                                <a class="header__nav-link" data-link="products">
                                     Меню бургеров
                                 </a>
                             </li>
                             <li class="header__nav-item">
-                                <a class="header__nav-link" href="#">
+                                <a class="header__nav-link" data-link="order">
                                     Оформление заказа
                                 </a>
                             </li>
                         </ul>
                     </nav>
-                    <a class="header__button" href="#"></a>
+                    <a class="js-currency header__button">$</a>
                 </div>
             </div>
         </header>
         <main>
             <section class="top container">
                 <div class="top__wrapper">
-                <span class="top__badge">
-                    Новое меню
-                </span>
-                    <h1 class="title title_h1 top__title">
+                    <span class="top__badge">
+                        Новое меню
+                    </span>
+                    <h1 class="js-main-title title title_h1 top__title">
                         бургер чеддер
                     </h1>
                     <p class="text top__text">
@@ -54,13 +54,13 @@
                         бургеры в
                         городе из отборной мраморной говядины.
                     </p>
-                    <a class="top__button" href="#" title="Изменить валюту">
+                    <a class="js-check-menu top__button" href="#" title="Изменить валюту">
                         Смотреть меню
                     </a>
                 </div>
                 <img class="top_bg" src="./images/main_burger.png" alt="Big burger">
             </section>
-            <section class="advantages">
+            <section class="advantages" id="why">
                 <div class="container">
                     <h2 class="advantages__title title title_h2">
                         почему нас выбирают?
@@ -96,9 +96,9 @@
                     </div>
                 </div>
             </section>
-            <section class="burger-menu">
+            <section class="burger-menu" id="products">
                 <div class="container">
-                    <h2 class="burger-menu__title title title_h2">
+                    <h2 class="js-menu burger-menu__title title title_h2">
                         выберите свой бургер
                     </h2>
                     <div class="burger-menu__items">
@@ -112,14 +112,14 @@
                             </p>
                             <div class="burger-menu__item-info-wrapper">
                                 <div class="burger-menu__item-info">
-                                    <span class="burger-menu__item-price">
+                                    <span class="js-product-price burger-menu__item-price" data-base-price="8">
                                         8 $
                                     </span>
                                     <span class="burger-menu__item-weight">
                                         360 гр
                                     </span>
                                 </div>
-                                <a class="burger-menu__item-button" href="#">Заказать</a>
+                                <a class="js-product-button burger-menu__item-button" data-link="order">Заказать</a>
                             </div>
                         </div>
                         <div class="burger-menu__item">
@@ -133,14 +133,14 @@
                             </p>
                             <div class="burger-menu__item-info-wrapper">
                                 <div class="burger-menu__item-info">
-                                    <span class="burger-menu__item-price">
+                                    <span class="js-product-price burger-menu__item-price" data-base-price="7">
                                         7 $
                                     </span>
                                     <span class="burger-menu__item-weight">
                                         390 гр
                                     </span>
                                 </div>
-                                <a class="burger-menu__item-button" href="#">Заказать</a>
+                                <a class="js-product-button burger-menu__item-button" data-link="order">Заказать</a>
                             </div>
                         </div>
                         <div class="burger-menu__item">
@@ -153,14 +153,14 @@
                             </p>
                             <div class="burger-menu__item-info-wrapper">
                                 <div class="burger-menu__item-info">
-                                    <span class="burger-menu__item-price">
+                                    <span class="js-product-price burger-menu__item-price" data-base-price="10">
                                         10 $
                                     </span>
                                     <span class="burger-menu__item-weight">
                                         420 гр
                                     </span>
                                 </div>
-                                <a class="burger-menu__item-button" href="#">Заказать</a>
+                                <a class="js-product-button burger-menu__item-button" data-link="order">Заказать</a>
                             </div>
                         </div>
                         <div class="burger-menu__item">
@@ -173,14 +173,14 @@
                             </p>
                             <div class="burger-menu__item-info-wrapper">
                                 <div class="burger-menu__item-info">
-                                    <span class="burger-menu__item-price">
+                                    <span class="js-product-price burger-menu__item-price" data-base-price="7">
                                         7 $
                                     </span>
                                     <span class="burger-menu__item-weight">
                                         220 гр
                                     </span>
                                 </div>
-                                <a class="burger-menu__item-button" href="#">Заказать</a>
+                                <a class="js-product-button burger-menu__item-button" data-link="order">Заказать</a>
                             </div>
                         </div>
                         <div class="burger-menu__item">
@@ -193,14 +193,14 @@
                             </p>
                             <div class="burger-menu__item-info-wrapper">
                                 <div class="burger-menu__item-info">
-                                    <span class="burger-menu__item-price">
+                                    <span class="js-product-price burger-menu__item-price" data-base-price="8">
                                         8 $
                                     </span>
                                     <span class="burger-menu__item-weight">
                                         220 гр
                                     </span>
                                 </div>
-                                <a class="burger-menu__item-button" href="#">Заказать</a>
+                                <a class="js-product-button burger-menu__item-button" data-link="order">Заказать</a>
                             </div>
                         </div>
                         <div class="burger-menu__item">
@@ -213,14 +213,14 @@
                             </p>
                             <div class="burger-menu__item-info-wrapper">
                                 <div class="burger-menu__item-info">
-                                    <span class="burger-menu__item-price">
+                                    <span class="js-product-price burger-menu__item-price" data-base-price="9">
                                         9 $
                                     </span>
                                     <span class="burger-menu__item-weight">
                                         320 гр
                                     </span>
                                 </div>
-                                <a class="burger-menu__item-button" href="#">Заказать</a>
+                                <a class="js-product-button burger-menu__item-button" data-link="order">Заказать</a>
                             </div>
                         </div>
                         <div class="burger-menu__item">
@@ -233,14 +233,14 @@
                             </p>
                             <div class="burger-menu__item-info-wrapper">
                                 <div class="burger-menu__item-info">
-                                    <span class="burger-menu__item-price">
+                                    <span class="js-product-price burger-menu__item-price" data-base-price="8">
                                         8 $
                                     </span>
                                     <span class="burger-menu__item-weight">
                                         280 гр
                                     </span>
                                 </div>
-                                <a class="burger-menu__item-button" href="#">Заказать</a>
+                                <a class="js-product-button burger-menu__item-button" data-link="order">Заказать</a>
                             </div>
                         </div>
                         <div class="burger-menu__item">
@@ -254,14 +254,14 @@
                             </p>
                             <div class="burger-menu__item-info-wrapper">
                                 <div class="burger-menu__item-info">
-                                    <span class="burger-menu__item-price">
+                                    <span class="js-product-price burger-menu__item-price" data-base-price="7">
                                         7 $
                                     </span>
                                     <span class="burger-menu__item-weight">
                                         380 гр
                                     </span>
                                 </div>
-                                <a class="burger-menu__item-button" href="#">Заказать</a>
+                                <a class="js-product-button burger-menu__item-button" data-link="order">Заказать</a>
                             </div>
                         </div>
                         <div class="burger-menu__item">
@@ -275,14 +275,14 @@
                             </p>
                             <div class="burger-menu__item-info-wrapper">
                                 <div class="burger-menu__item-info">
-                                    <span class="burger-menu__item-price">
+                                    <span class="js-product-price burger-menu__item-price" data-base-price="11">
                                         11 $
                                     </span>
                                     <span class="burger-menu__item-weight">
                                         400 гр
                                     </span>
                                 </div>
-                                <a class="burger-menu__item-button" href="#">Заказать</a>
+                                <a class="js-product-button burger-menu__item-button" data-link="order">Заказать</a>
                             </div>
                         </div>
                         <div class="burger-menu__item">
@@ -295,14 +295,14 @@
                             </p>
                             <div class="burger-menu__item-info-wrapper">
                                 <div class="burger-menu__item-info">
-                                    <span class="burger-menu__item-price">
+                                    <span class="js-product-price burger-menu__item-price" data-base-price="9">
                                         9 $
                                     </span>
                                     <span class="burger-menu__item-weight">
                                         300 гр
                                     </span>
                                 </div>
-                                <a class="burger-menu__item-button" href="#">Заказать</a>
+                                <a class="js-product-button burger-menu__item-button" data-link="order">Заказать</a>
                             </div>
                         </div>
                         <div class="burger-menu__item">
@@ -316,14 +316,14 @@
                             </p>
                             <div class="burger-menu__item-info-wrapper">
                                 <div class="burger-menu__item-info">
-                                    <span class="burger-menu__item-price">
+                                    <span class="js-product-price burger-menu__item-price" data-base-price="8">
                                         8 $
                                     </span>
                                     <span class="burger-menu__item-weight">
                                         320 гр
                                     </span>
                                 </div>
-                                <a class="burger-menu__item-button" href="#">Заказать</a>
+                                <a class="js-product-button burger-menu__item-button" data-link="order">Заказать</a>
                             </div>
                         </div>
                         <div class="burger-menu__item">
@@ -337,20 +337,20 @@
                             </p>
                             <div class="burger-menu__item-info-wrapper">
                                 <div class="burger-menu__item-info">
-                                    <span class="burger-menu__item-price">
+                                    <span class="js-product-price burger-menu__item-price" data-base-price="9">
                                         9 $
                                     </span>
                                     <span class="burger-menu__item-weight">
                                         360 гр
-                                    </span>
+                                        </span>
                                 </div>
-                                <a class="burger-menu__item-button" href="#">Заказать</a>
+                                <a class="js-product-button burger-menu__item-button" data-link="order">Заказать</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="ordering">
+            <section class="ordering" id="order">
                 <div class="container container_order">
                     <h2 class="ordering__title title title_h2">
                         оформление заказа
@@ -362,15 +362,15 @@
                         </p>
                         <div class="ordering__form-input-wrapper">
                             <div class="ordering__form-input">
-                                <input type="text" placeholder="Ваш заказ">
+                                <input id="burder" type="text" placeholder="Ваш заказ">
                             </div>
                             <div class="ordering__form-input">
-                                <input type="text" placeholder="Ваше имя">
+                                <input id="name" type="text" placeholder="Ваше имя">
                             </div>
                             <div class="ordering__form-input">
-                                <input type="text" placeholder="Ваш телефон">
+                                <input id="phone" type="text" placeholder="Ваш телефон">
                             </div>
-                            <button class="ordering__form-button">Оформить заказ</button>
+                            <button class="ordering__form-button" id="order-action">Оформить заказ</button>
                         </div>
                     </div>
                 </div>
@@ -386,5 +386,6 @@
                 </a>
             </div>
         </footer>
+        <script src="./js/index.min.js" defer></script>
     </body>
 </html>
