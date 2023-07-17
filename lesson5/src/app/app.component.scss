@@ -1,0 +1,23 @@
+@import './styles/config/index';
+@import './styles/components/index';
+
+main {
+  background: #191411 url('../assets/images/main_bg.png') center top no-repeat;
+  background-size: contain;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: local('Gilroy'), url('../assets/fonts/Gilroy-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: local('Merriweather'), url('../assets/fonts/Merriweather-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}

@@ -1,0 +1,94 @@
+@import '../config/vars';
+
+.container_order {
+  position: relative;
+}
+
+.ordering {
+  padding-bottom: 180px;
+  background-image: url('../../../assets/images/order_bg.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  &__img {
+    position: absolute;
+    top: 0;
+    right: calc(100% - 764px);
+  }
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__form {
+    max-width: 425px;
+    margin-left: 675px;
+    padding: 60px 40px;
+    border: 1px solid #353535;
+    border-radius: 16px;
+    background: #211A16;
+  }
+
+  &__form-text {
+    font: 600 24px/1.2 $textFont;
+    margin-bottom: 40px;
+    text-align: center;
+    color: $defaultTextColor;
+  }
+
+  &__form-input-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__form-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 64px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background: linear-gradient(95.61deg, #DA8023 0%, #E2B438 100%);
+  }
+
+  &__form-input.error {
+    background: red;
+  }
+
+  &__form-input input {
+    font: 600 16px/1.4 $textFont;
+    width: calc(100% - 2px);
+    height: 62px;
+    padding: 20px 10px;
+    color: #757575;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: #211A16;
+  }
+
+  &__form-button {
+    font: 600 18px/1.2 $textFont;
+    position: relative;
+    display: inline-block;
+    padding: 20px 100px;
+    transition: all .3s ease;
+    text-align: center;
+    text-decoration: none;
+    color: #191411;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(95.61deg, #DA8023 0%, #E2B438 100%);
+
+    &:hover {
+      transition: all .3s ease;
+      background: linear-gradient(95.61deg, #AC6115 0%, #9E7A19 100%);
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      color: grey;
+      background: #343434;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+$titleFont: Merriweather, sans-serif;
+$textFont: Gilroy, sans-serif;
+$defaultTextColor: #FFFFFF;
+.title {
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $defaultTextColor;
+
+  &_h1 {
+    font: 900 120px/1.3 $titleFont;
+  }
+
+  &_h2 {
+    font: 900 64px/1.2 $titleFont;
+    text-align: center;
+  }
+}
+
+.text {
+  font: 600 24px/1.2 $textFont;
+  color: $defaultTextColor;
+}
