@@ -1,0 +1,152 @@
+<header class="header">
+  <div class="container">
+    <div class="header__items-wrapper">
+      <a class="header__logo" href="#">
+        <img ngSrc="../assets/images/top-logo.png" alt="logo" height="50" width="157">
+      </a>
+      <nav class="header__nav">
+        <ul class="header__nav-items">
+          <li class="header__nav-item">
+            <a class="header__nav-link" (click)="scrollTo(why)">
+              Почему у нас
+            </a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" (click)="scrollTo(products)">
+              Меню бургеров
+            </a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" (click)="scrollTo(order)">
+              Оформление заказа
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <a class="js-currency header__button" (click)="changeCurrency()">{{currency}}</a>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="top container">
+    <div class="top__wrapper">
+      <span class="top__badge">
+        Новое меню
+      </span>
+      <h1 class="js-main-title title title_h1 top__title">
+        бургер чеддер
+      </h1>
+      <p class="text top__text">
+        Мы обновили наше меню, спешите попробовать сезонные новинки и насладиться отличным вкусом наших бургеров. Готовим для вас лучшие
+        бургеры в
+        городе из отборной мраморной говядины.
+      </p>
+      <a class="js-check-menu top__button" (click)="scrollTo(products)" title="Изменить валюту">
+        Смотреть меню
+      </a>
+    </div>
+    <img class="top_bg" ngSrc="../assets/images/main_burger.png" alt="Big burger" height="980" width="1286">
+  </section>
+  <section class="advantages" id="why" #why>
+    <div class="container">
+      <h2 class="advantages__title title title_h2">
+        почему нас выбирают?
+      </h2>
+      <div class="advantages__items">
+        <div class="advantages__item advantages__item_burger">
+          <h3 class="advantages__item-title">
+            Авторские рецепты
+          </h3>
+          <p class="advantages__item-text">
+            Наши бургеры обладают уникальным сочетанием вкусов и не похожи ни на какие другие.
+            Мы тщательно отбираем лучшие ингредиенты и сочетания вкусов для нашего меню.
+          </p>
+        </div>
+        <div class="advantages__item advantages__item_meat">
+          <h3 class="advantages__item-title">
+            Мраморная говядина
+          </h3>
+          <p class="advantages__item-text">
+            Для наших бургеров мы используем отборную 100% мраморную говядину, которую закупаем исключительно у фермеров.
+            Мы уверены в качестве нашего мяса.
+          </p>
+        </div>
+        <div class="advantages__item advantages__item_food-truck">
+          <h3 class="advantages__item-title">
+            Быстрая доставка
+          </h3>
+          <p class="advantages__item-text">
+            Мы доставляем в пределах МКАД за 30 минут, а если не успеем — доставка бесплатно.
+            Мы тщательно упаковываем наши бургеры, чтобы по дороге они не остыли.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="burger-menu" id="products" #products>
+    <div class="container">
+      <h2 class="js-menu burger-menu__title title title_h2">
+        выберите свой бургер
+      </h2>
+      <div class="burger-menu__items">
+        <div class="burger-menu__item" *ngFor="let product of productsData">
+          <img ngSrc="{{product.image}}" alt="Бургер чеддер & бекон" width="324" height="250">
+          <h3 class="burger-menu__item-title">
+            {{product.title}}
+          </h3>
+          <p class="burger-menu__item-text">
+            {{product.text}}
+          </p>
+          <div class="burger-menu__item-info-wrapper">
+            <div class="burger-menu__item-info">
+              <span class="js-product-price burger-menu__item-price">
+                {{product.price}} {{currency}}
+              </span>
+              <span class="burger-menu__item-weight">
+                {{product.grams}} гр
+              </span>
+            </div>
+            <a class="js-product-button burger-menu__item-button" (click)="scrollTo(order, product)">Заказать</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="ordering" id="order" #order>
+    <div class="container container_order">
+      <h2 class="ordering__title title title_h2">
+        оформление заказа
+      </h2>
+      <img class="ordering__img" ngSrc="../assets/images/order_image.png" alt="Box burger" width="1046" height="867">
+      <div class="ordering__form">
+        <p class="ordering__form-text">
+          Заполните все данные и наш менеджер свяжется с вами для подтверждения заказа
+        </p>
+        <div class="ordering__form-input-wrapper" [formGroup]="form">
+          <div class="ordering__form-input"
+               [class]="{'error': form.get('order')?.invalid && (form.get('order')?.dirty || form.get('order')?.touched)}">
+            <input id="burger" type="text" placeholder="Выберите товар в списке" formControlName="order" readonly>
+          </div>
+          <div class="ordering__form-input" [class]="{'error': form.get('name')?.invalid && (form.get('name')?.dirty || form.get('name')?.touched)}">
+            <input id="name" type="text" placeholder="Ваше имя" formControlName="name">
+          </div>
+          <div class="ordering__form-input"
+               [class]="{'error': form.get('phone')?.invalid && (form.get('phone')?.dirty || form.get('phone')?.touched)}">
+            <input id="phone" type="text" placeholder="Ваш телефон" formControlName="phone">
+          </div>
+          <button class="ordering__form-button" id="order-action" (click)="confirmOrder()" [disabled]="!form.valid">Оформить заказ</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer container">
+  <div class="footer__wrapper">
+    <a class="footer__logo" href="#">
+      <img ngSrc="../assets/images/top-logo.png" alt="logo" height="50" width="157">
+    </a>
+    <a class="footer__text" href="#">
+      Все права защищены
+    </a>
+  </div>
+</footer>

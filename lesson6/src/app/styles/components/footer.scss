@@ -1,0 +1,19 @@
+@import '../config/vars';
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__text {
+    text-decoration: none;
+    font: 600 16px/1.2 $textFont;
+    color: $defaultTextColor;
+  }
+}

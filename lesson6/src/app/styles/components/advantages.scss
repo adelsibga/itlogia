@@ -1,0 +1,68 @@
+@import '../config/vars';
+
+.advantages {
+  padding-bottom: 180px;
+  background: url('../../../assets/images/advantages-bg.png');
+  background-size: cover;
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 312px;
+    padding-top: 124px;
+    text-align: center;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      width: 100px;
+      height: 100px;
+      content: '';
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &_burger {
+      &::before {
+        background-image: url('../../../assets/images/burger.png');
+      }
+    }
+
+    &_meat {
+      &::before {
+        background-image: url('../../../assets/images/meat.png');
+      }
+    }
+
+    &_food-truck {
+      &::before {
+        background-image: url('../../../assets/images/food-truck.png');
+      }
+    }
+  }
+
+  &__item-title {
+    font: 600 24px/1.2 $textFont;
+    position: relative;
+    margin-bottom: 24px;
+    color: $defaultTextColor;
+  }
+
+  &__item-text {
+    font: 600 16px/1.4 $textFont;
+    color: $defaultTextColor;
+  }
+}
