@@ -106,7 +106,7 @@
                 {{product.grams}} гр
               </span>
             </div>
-            <a class="js-product-button burger-menu__item-button" (click)="scrollTo(order)">Заказать</a>
+            <a class="js-product-button burger-menu__item-button" (click)="scrollTo(order, product)">Заказать</a>
           </div>
         </div>
       </div>
@@ -125,7 +125,7 @@
         <div class="ordering__form-input-wrapper" [formGroup]="form">
           <div class="ordering__form-input"
                [class]="{'error': form.get('order')?.invalid && (form.get('order')?.dirty || form.get('order')?.touched)}">
-            <input id="burger" type="text" placeholder="Ваш заказ" formControlName="order">
+            <input id="burger" type="text" placeholder="Выберите товар в списке" formControlName="order" readonly>
           </div>
           <div class="ordering__form-input" [class]="{'error': form.get('name')?.invalid && (form.get('name')?.dirty || form.get('name')?.touched)}">
             <input id="name" type="text" placeholder="Ваше имя" formControlName="name">
