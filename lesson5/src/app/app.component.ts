@@ -7,7 +7,6 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'lesson5';
   currency = '$'
 
   form = this.fb.group({
